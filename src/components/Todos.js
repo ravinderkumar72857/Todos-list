@@ -9,7 +9,7 @@ export const Todos = ({todos,onDelete}) => {
     <>
     <div className='container my-3'  style={myStyle}>
       <h3 className=' my-3'>Todos List</h3>
-      {(todos.length==0)?"No Todo To Display":
+      {(todos.length===0)?"No Todo To Display":
       todos.map((todo)=>{
         return   <TodoItem todo={todo} key={todo.sno} onDelete={onDelete}/>
         ;

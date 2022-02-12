@@ -35,7 +35,7 @@ function App() {
   const addTodo = (title,desc) => {
     // console.log("i am adding title :",title," and description is ",desc);
     
-    if(todos.length==0){
+    if(todos.length===0){
       sno=0;
     }
     else{
@@ -62,14 +62,14 @@ function App() {
   <Header title="Todos List" searchBar={false} />
 
   <Routes>
-          <Route path="https://github.com/ravinderkumar72857/todos-list/" element={<>
+          <Route path="https://ravinderkumar72857.github.io/todos-list/" element={<>
             <AddTodo addTodo={addTodo}/>
   <Todos todos={todos} onDelete={onDelete}/>
             </>
           }>
           
           </Route>
-          <Route path="https://github.com/ravinderkumar72857/todos-list/about"
+          <Route path="https://ravinderkumar72857.github.io/todos-list/about"
 
           element={<About />}>
           </Route>
