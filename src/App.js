@@ -69,7 +69,7 @@ function App() {
           }>
           
           </Route>
-          <Route path="/about"
+          <Route path="todos-list/about"
 
           element={<About />}>
           </Route>
