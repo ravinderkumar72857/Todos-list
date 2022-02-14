@@ -62,7 +62,7 @@ function App() {
   <Header title="Todos List" searchBar={false} />
 
   <Routes>
-          <Route path="/" element={<>
+          <Route path="todos-list/" element={<>
             <AddTodo addTodo={addTodo}/>
   <Todos todos={todos} onDelete={onDelete}/>
             </>
