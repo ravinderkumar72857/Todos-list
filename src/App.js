@@ -5,7 +5,7 @@ import {Footer} from './components/Footer.js';
 import {Todos} from './components/Todos.js';
 import {AddTodo} from './components/AddTodo.js';
 import {About} from './components/About.js';
-import React, { useState,useEffect } from 'react';
+import React, { useState,useEffect, Fragment } from 'react';
 import {
 BrowserRouter ,
   Routes,
@@ -58,24 +58,20 @@ function App() {
    
   }, [todos]);
   return (
-    <BrowserRouter>
-  <Header title="Todos List" searchBar={false} />
-
-  <Routes>
-          <Route exact path="/todos-list" element={<>
-            <AddTodo addTodo={addTodo}/>
-  <Todos todos={todos} onDelete={onDelete}/>
-            </>
-          }>
-          
-          </Route>
-          <Route exact path="/todos-list/about"
-
-          element={<About />}>
-          </Route>
-        </Routes>
-   <Footer/>
-    </BrowserRouter>
+    <Fragment>
+      <Header title="Todos List" searchBar={false} />
+      <BrowserRouter>
+          <Routes>
+              <Route exact path="/todos-list" element={<>
+                  <AddTodo addTodo={addTodo}/>
+                  <Todos todos={todos} onDelete={onDelete}/>
+              </>
+              } />
+              <Route exact path="/todos-list/about" element={<About />} />
+          </Routes>
+      </BrowserRouter>
+      <Footer />
+  </Fragment>
   );
 }
 
