@@ -58,8 +58,10 @@ function App() {
    
   }, [todos]);
   return (
+    <>
+    <Header title="Todos List" searchBar={false} />
     <BrowserRouter>
-  <Header title="Todos List" searchBar={false} />
+  
 
   <Routes>
           <Route exact path="/todos-list" element={<>
@@ -74,8 +76,10 @@ function App() {
           element={<About />}>
           </Route>
         </Routes>
-   <Footer/>
+  
     </BrowserRouter>
+ <Footer/>
+            </>
   );
 }
 
