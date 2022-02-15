@@ -62,22 +62,19 @@ function App() {
   <Header title="Todos List" searchBar={false} />
 
   <Routes>
-          <Route path="todos-list/" element={<>
+          <Route exact path="/todos-list" element={<>
             <AddTodo addTodo={addTodo}/>
   <Todos todos={todos} onDelete={onDelete}/>
             </>
           }>
           
           </Route>
-          <Route path="todos-list/about"
+          <Route exact path="/todos-list/about"
 
           element={<About />}>
           </Route>
         </Routes>
-  
-
-  
-  <Footer/>
+   <Footer/>
     </BrowserRouter>
   );
 }
